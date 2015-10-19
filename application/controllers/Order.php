@@ -77,7 +77,7 @@ class Order extends Application {
 
     // add an item to an order
     function add($order_num, $item) {
-        //FIXME
+       	$this->hokeyfix($this->data['meals'],$order_num);
         redirect('/order/display_menu/' . $order_num);
     }
 

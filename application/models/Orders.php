@@ -14,7 +14,7 @@ class Orders extends MY_Model {
 
     // add an item to an order
     function add_item($num, $code) {
-        $CI = & get_istance();
+        $CI = & get_instance();
         if ($CI->orderotems->exists($num,$code))
         {
             $record = $CI -> orderitems -> get($num, $code);
@@ -32,7 +32,7 @@ class Orders extends MY_Model {
 
     // calculate the total for an order
     function total($num) {
-        $CI = & get_instace();
+        $CI = & get_instance();
         $items = $CI -> orderitems -> group($num);
         $result = 0;
         if (count($items) > 0)
